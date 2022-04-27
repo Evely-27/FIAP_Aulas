@@ -13,13 +13,13 @@ cima(tpo) direita(rigth) baixo() esquerda(lihf)*/
 body {
     font-family: "Roboto Mono" , monospace;
     text-align: center;
-    background-color: #000;
+    background-color: #0000ff;
     background-size: cover;
     background-position: center top;
-    background-image: no-repeat;
+    background-image: url(https://th.bing.com/th/id/R.62810b38956e124bda678cdcd0f152c8?rik=ndolt85vdBUB2A&riu=http%3a%2f%2fwww.1zoom.me%2fbig2%2f837%2f257684-Sepik.jpg&ehk=Amg%2fz6PLGeo80rbb%2b1oCXiId65rTKEnv6TirLpkl0SY%3d&risl=&pid=ImgRaw&r=0);
     color: #fff;
     font-size: 1.5rem;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .container {
@@ -36,6 +36,7 @@ body {
 
 .page-subtitle {
     margin-top: 10px;
+    background-color: #000;
 }
 img {
     max-height: 250px;
@@ -60,4 +61,26 @@ img {
 /* hover= muda a situação do objeto/elemento ao passar o mouse por cima, neste exemplo muda o vermelho pra uma cor mais forte */
 .botao:hover {
     background-color: red;
+}
+#err0 {
+    background-color: red;
+    color: #fff;
+}
+
+#catalogo {
+    display: flex;
+    flex-flow: wrap;
+    padding: 1rem;
+}
+
+.retangulo {
+    position: absolute;
+    width: 60%;
+    height: 25%;
+    background-color: #000;
+    /* z-index= serve para definir onde vai ficar  aprofundidade, -1 fica atras da pagina/conteudo */
+    z-index: -1;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    left: 14rem;
 }
