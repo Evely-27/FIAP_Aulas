@@ -1,0 +1,63 @@
+/*Espaçamento entre os objetos/elementos 
+margin: fronteira/distancia entre eo nosso objeto  e outro perto
+border: fora do elemento
+padding dentro do elemento, o quanto vai permitir de espaço para elementos dentro  
+margin or padding:
+cima(tpo) direita(rigth) baixo() esquerda(lihf)*/
+/* Tirar as formatação da pagina que ja vem ,(*) = pega toda a pagina*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Roboto Mono" , monospace;
+    text-align: center;
+    background-color: #000;
+    background-size: cover;
+    background-position: center top;
+    background-image: no-repeat;
+    color: #fff;
+    font-size: 1.5rem;
+    /* height: 100vh; */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.page-title {
+    color: rgb(234, 124 , 225);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.page-subtitle {
+    margin-top: 10px;
+}
+img {
+    max-height: 250px;
+}
+/* id do input*/
+#filme, #titulo {
+    width: 30rem; 
+    margin: 1rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+.botao {
+    font: size 1.5rem; ;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 2rem ;
+    background-color: #a71601;
+    color: #fff;
+    cursor: pointer;
+    /* pointer = muda o estilo do ponto do cursor para mão */
+}
+/* hover= muda a situação do objeto/elemento ao passar o mouse por cima, neste exemplo muda o vermelho pra uma cor mais forte */
+.botao:hover {
+    background-color: red;
+}
