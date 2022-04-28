@@ -37,4 +37,19 @@ while (g < 3) {
 }
 //* While ... Do
 
- 
+// let h = 0 
+
+// do {
+//     console.log(h)
+// }while (h > 0)
+
+let p = 0
+
+while (p > 0) {
+    console.log('Bom dia do laço while.,.')
+    a++
+}
+
+ do {
+     console.log('Bom dia do laço do ... while;.;')
+ }while(p > 0)
