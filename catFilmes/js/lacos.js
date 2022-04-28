@@ -13,20 +13,28 @@
 // console.log('Forma manual do for.')
 
 //  for com j incrementando com i
-for (let i = 0; i <= 10; i ++) {
-   for(let j = 0; j <= i ; j ++){
-    console.log(j)
-   }
-    console.log(i)
-}
+// for (let i = 0; i <= 10; i ++) {
+//    for(let j = 0; j <= i ; j ++){
+//     console.log(j)
+//    }
+//     console.log(i)
+// }
 
-for (let i = 0; i <= 10; i ++) {
-    for(let j = 0; j <= 10 ; j ++){
-     console.log(`${i} * ${j} = ${i * j}`)
-    }
-     
- }
+// for (let i = 0; i <= 10; i ++) {
+//     for(let j = 0; j <= 10 ; j ++){
+//      console.log(`${i} * ${j} = ${i * j}`)
+//     }
+//  }
+
 // * While
+
+let g = 0
+//  enquanto NÃO for verdadeira, continua
+//  sem g ++  ele fica infinito pq o g fica eternamente menor q 3,
+while (g < 3) {
+    console.log('Buenos díasss')
+    g ++
+}
 //* While ... Do
 
  
