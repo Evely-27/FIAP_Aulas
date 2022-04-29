@@ -27,7 +27,7 @@
 //  }
 
 // * While
-
+// bebe agua enquanto estiver com cedo, no caso nao vai beber se não estiver
 let g = 0
 //  enquanto NÃO for verdadeira, continua
 //  sem g ++  ele fica infinito pq o g fica eternamente menor q 3,
@@ -49,7 +49,8 @@ while (p > 0) {
     console.log('Bom dia do laço while.,.')
     a++
 }
-
+// beba água!=  primeiro de tudo vc vai beber.
  do {
      console.log('Bom dia do laço do ... while;.;')
+// enquanto vc estiver com sede
  }while(p > 0)
