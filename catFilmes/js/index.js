@@ -19,7 +19,7 @@ let i = 0
 let erro =  document.querySelector('#erro')
 
 for (i; i < listaDeFilmes.length; i++) {
-    catalogo.innerHTML = `<div>
+    catalogo.innerHTML += `<div>
         <img src=${listaDeFilmes[i]}><figcaption>${listaDeTitulos[i]}</figcaption>
     </div> `
 }
