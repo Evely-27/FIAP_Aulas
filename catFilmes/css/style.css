@@ -13,13 +13,14 @@ cima(tpo) direita(rigth) baixo() esquerda(lihf)*/
 body {
     font-family: "Roboto Mono" , monospace;
     text-align: center;
-    background-color: #0000ff;
+    background-color: #000;
     background-size: cover;
     background-position: center top;
     background-image: url(https://th.bing.com/th/id/R.62810b38956e124bda678cdcd0f152c8?rik=ndolt85vdBUB2A&riu=http%3a%2f%2fwww.1zoom.me%2fbig2%2f837%2f257684-Sepik.jpg&ehk=Amg%2fz6PLGeo80rbb%2b1oCXiId65rTKEnv6TirLpkl0SY%3d&risl=&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
     color: #fff;
     font-size: 1.5rem;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .container {
