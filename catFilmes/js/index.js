@@ -40,8 +40,21 @@ function cadastrar() {
         listaDeTitulos.push(novoTitulo)
 // apagar o erro anterior
         erro.innerHTML = ''
-    }
 // função para mostrar os filmes 
+
+    }
+
     document.querySelector('#fime').vaule = ''
     document.querySelector('#titulo').vaule = ''
+}
+
+function mostrarFilmes() {
+    do {
+        catalogo.innerHTML += `
+        <div>
+            <img sc= ${listaDeFilmes[i]} alt= ${listaDeTitulos[i]}><figcaption>${listaDeTitulos}
+        </div>
+        `   
+        i++
+    }while(i < listaDeFilmes.length)
 }
