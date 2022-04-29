@@ -10,3 +10,10 @@ let listaDeTitulos = [
     'RED: Crescer é uma fera',
     'Missão Impossível: Efeito Fallout'
 ]
+
+//! DOM = Docment object model= usado para acesar a pagina html pelo js, para poder manusea-lo
+// queryselector ou getElementbyID/name/class/tagname
+// document.getElementById = pegar pelo emento do 
+let catalogo = document.querySelector('#catalogo')
+let i = 0
+let erro =  document.querySelector('#erro')
