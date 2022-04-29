@@ -23,3 +23,25 @@ for (i; i < listaDeFilmes.length; i++) {
         <img src=${listaDeFilmes[i]}><figcaption>${listaDeTitulos[i]}</figcaption>
     </div> `
 }
+
+let filmeRepetido = true
+
+function cadastrar() {
+    // o .value é para pegar o que esta sendo digitado la na pagina, mas so para acessar o valor, não pegar e modificar , mexer nele
+    let novoFilme = document.querySelector ('#filme').value
+    // console.log(novoFilme)
+    let novoTitulo = document.querySelector('#titulo').value
+    // console.log(novoTitulo)
+
+    if (listaDeFilmes.includes(novoFilme) || listaDeTitulos.includes(novoTitulo)) {
+        erro.innerHTML = `Filme ${novoTitulo} já cadastrado.`
+    } else {
+        listaDeFilmes.push(novoFilme)
+        listaDeTitulos.push(novoTitulo)
+// apagar o erro anterior
+        erro.innerHTML = ''
+    }
+// função para mostrar os filmes 
+    document.querySelector('#fime').vaule = ''
+    document.querySelector('#titulo').vaule = ''
+}
