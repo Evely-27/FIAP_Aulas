@@ -87,12 +87,12 @@ img {
     height: 25%;
     background-color: #000;
     /* z-index= serve para definir onde vai ficar  aprofundidade, -1 fica atras da pagina/conteudo */
-    z-index: -1;
+    /* z-index: -1; */
     border-radius: 0.5rem;
     opacity: 0.8;
     left: 14rem;
 }
-.filme {
+filme {
     padding: 1.5rem;
     width: 13rem;
 /* novo */
