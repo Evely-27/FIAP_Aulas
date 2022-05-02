@@ -1,26 +1,30 @@
 let  listaDeFilmes = [
     'https://images-na.ssl-images-amazon.com/images/I/51oXu7N-AOL.jpg',
     'https://media.fstatic.com/dxYlAYTTnAOGgZBBHHHHOoDp2zs=/290x478/smart/media/movies/covers/2021/06/kc0YEjL5iLjEbedhpqqpaaUEPZa.jpg',
-    'https://cdn.fstatic.com/media/movies/covers/2018/10/2111834923.jpg'
+    'https://cdn.fstatic.com/media/movies/covers/2018/10/2111834923.jpg',
+    'https://media.movieassets.com/static/images/items/movies/posters/c4b69eefc8ac80417963cc5b546bbfbe.jpg',
+    'https://image.tmdb.org/t/p/w1280/hX5tQfhCu2aY0VFhQMIMNvrhM1r.jpg'
 
 
 ]
 let listaDeTitulos = [
-    'Crespúsculo',
+    'Crepúsculo',
     'RED: Crescer é uma fera',
-    'Missão Impossível: Efeito Fallout'
+    'Missão Impossível: Efeito Fallout',
+    'Cinderela',
+    'Sherlock Holmes'
 ]
 
 //! DOM = Docment object model= usado para acesar a pagina html pelo js, para poder manusea-lo
 // queryselector ou getElementbyID/name/class/tagname
 // document.getElementById = pegar pelo emento do 
-let catalogo = document.querySelector('#catalogo')
+let catalogo = document.querySelector("#catalogo")
 let i = 0
-let erro =  document.querySelector('#erro')
+let erro =  document.querySelector("#erro")
 
 for (i; i < listaDeFilmes.length; i++) {
-    catalogo.innerHTML += `<div>
-        <img src=${listaDeFilmes[i]}><figcaption>${listaDeTitulos[i]}</figcaption>
+    catalogo.innerHTML += `<div class ="filme">
+        <img src=${listaDeFilmes[i]}><figcaption>${listaDeTitulos[i]}
     </div> `
 }
 
@@ -41,18 +45,18 @@ function cadastrar() {
 // apagar o erro anterior
         erro.innerHTML = ''
 // função para mostrar os filmes 
-
+        mostrarFilmes()
     }
 
-    document.querySelector('#fime').vaule = ''
-    document.querySelector('#titulo').vaule = ''
+    document.querySelector('#fime').value = ''
+    document.querySelector('#titulo').value = ''
 }
 
 function mostrarFilmes() {
     do {
         catalogo.innerHTML += `
-        <div>
-            <img sc= ${listaDeFilmes[i]} alt= ${listaDeTitulos[i]}><figcaption>${listaDeTitulos}
+        <div class = "filme">
+            <img sc=${listaDeFilmes[i]} alt=${listaDeTitulos[i]}>figcaption<${listaDeTitulos[i]}
         </div>
         `   
         i++
