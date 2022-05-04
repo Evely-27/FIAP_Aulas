@@ -1,0 +1,109 @@
+.wrapper {
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 25px;
+}
+.wrapper header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper .inputField {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input {
+    outline: none;
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.inputField button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #8e49e8;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    opacity: 0.6;
+    pointer-events: none;
+    color: #fff;
+
+}
+
+.inputField button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoList {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor:  default;
+    overflow: hidden;
+}
+
+.todoList li span {
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background-color: #e74c3c;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todoList li:hover span {
+    right: 0;
+}
+
+.wrapper .footer {
+    display: flex;
+    width: 100%;  /* ocupar 100% da div */
+    margin-top: 20px;
+    justify-content: space-between; /* organização na linha , esse fica um espaço entre os elemntos */
+    align-items: center; /* alinhar todods os intens da classe no centro */
+}
+
+.footer button {
+    border: none; /* retirar o conturno do botao */
+    outline: none;
+    background: #8e49e8;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 6px 10px;
+    opacity: 0.6; /* para desabilitar o botao, deixa-o mais claro */
+    pointer-events: none;
+}
+
+.footer button.active {/* nao confundir com o :active q é uma sub classe */
+    opacity: 1;
+    pointer-events: auto;
+}
