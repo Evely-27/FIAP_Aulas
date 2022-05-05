@@ -13,3 +13,17 @@ inputBox.onkeyup = _ =>{
         addBtn.classList.remove('active')
     }
 }
+
+// função que adiciona tarefa
+addBtn.onclik = _ => {
+    let userData = inputBox.value
+    let getLocalStorage = localStorage.getItem('New TODO')
+    if(getLocalStorage == null) { // vamos verificar 
+        listArr = [] // vamos criar um arry em branco
+    }else {
+        listArr = JSON.parse(getLocalStorage)
+        // estamos empurrando ou 
+    }
+    listArr.push(userData) // Empurando para dentro do arry os dados do usuario
+    localStorage.setItem('New TODO',JOSON.string(listArr)) // estamos transformando um objeto js em um fragmento js
+}
