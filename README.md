@@ -1,1 +1,6 @@
-# FIAP_Aulas_HTML_CSS-JS
+# FIAP_Aulas
+Conteudos desenvolvidos durante o curso fornecido pela Fiap.
+* HTML
+* CSS
+* JAVASCRIPT
+* NODE JS
