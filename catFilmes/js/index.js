@@ -16,11 +16,11 @@ let listaDeTitulos = [
 ]
 
 //! DOM = Docment object model= usado para acesar a pagina html pelo js, para poder manusea-lo
-// queryselector ou getElementbyID/name/class/tagname
-// document.getElementById = pegar pelo emento do 
-let catalogo = document.querySelector("#catalogo")
+//? queryselector ou getElementbyID/name/class/tagname
+//? document.getElementById = pegar pelo emento do 
+let catalogo = document.querySelector('#catalogo')
 let i = 0
-let erro =  document.querySelector("#erro")
+let erro =  document.querySelector('#erro')
 
 for (i; i < listaDeFilmes.length; i++) {
     catalogo.innerHTML += `<div class ="filme">
@@ -31,8 +31,7 @@ for (i; i < listaDeFilmes.length; i++) {
 let filmeRepetido = true
 
 function cadastrar() {
-    // o .value é para pegar o que esta sendo digitado la na pagina, mas so para acessar o valor, não pegar e modificar , mexer nele
-    let novoFilme = document.querySelector ('#filme').value
+    let novoFilme = document.querySelector ('#filme').value // o .value é para pegar o que esta sendo digitado la na pagina, mas so para acessar o valor, não pegar e modificar , mexer nele
     // console.log(novoFilme)
     let novoTitulo = document.querySelector('#titulo').value
     // console.log(novoTitulo)
@@ -42,10 +41,8 @@ function cadastrar() {
     } else {
         listaDeFilmes.push(novoFilme)
         listaDeTitulos.push(novoTitulo)
-// apagar o erro anterior
-        erro.innerHTML = ''
-// função para mostrar os filmes 
-        mostrarFilmes()
+        erro.innerHTML = '' // apagar o erro anterior
+        mostrarFilmes() // função para mostrar os filmes 
     }
 
     document.querySelector('#fime').value = ''
