@@ -21,3 +21,16 @@ let f = '50'
 
 console.log(`Esta comparação é : ${a === d}, ou seja ${a} = ${a} = ${d}!`) // ? estmmos fazendo comparação com dois iguais, comparando valores e tipos
 console.log(`Esta comparação é : ${a === f}, ou seja ${a} = ${a} !==(diferente) ${f}!`) // ? estmmos fazendo comparação com dois iguais, comparando valores e tipos
+
+// mais exemplos
+
+let e = 5
+let  c = 8
+
+function resultado(){
+     somar(e,c)
+}
+// arrow function não pode ser chamada dentro de outra
+function somar(e,c) {
+    return e + c
+}
