@@ -8,9 +8,11 @@
 section { /* pega todos os elemntos section */
     border: solid gray 1px;
 }
-/* .col-lg-2{
-    border: solid red 1px;
-} */
 .col-lg-4{
     margin-top: 10px;
+}
+
+.modal-dialog {
+    max-width: 75%;
+    margin: 1.75rem auto;
 }

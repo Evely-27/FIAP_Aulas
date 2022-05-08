@@ -1,109 +1,41 @@
-<!-- index é o primeiro arquivo a ser lidopelo servidor -->
-<!DOCTYPE html>
+<!DOCTYPE html><!-- index é o primeiro arquivo a ser lidopelo servidor -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Projeto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
 </head>
-<!-- <style> 
-css em bloco
- </style> -->
-    <body>
+<body>
         <section class="container sessao" id="sessao" style="border: solid red 1px;"> <!-- essa classe container centraliza, as classes no bootstrep estilizam qualquer elemento(css in line) tem prioridade na hieraraquia-->
-            <!-- Testando -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card"> <!-- style="width: 18rem;" ele coloca a largura de 18rem-->
-                        <img src="https://meupet.elanco.com/sites/g/files/adhwdz661/files/styles/paragraph_image/public/2020-07/gato_malhado_azul_maine_cool_no_quintal_rodeado_por_flores_amarelas_no_gramado.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Botão que ativa o modal 
-                          </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card"> <!-- style="width: 18rem;" ele coloca a largura de 18rem-->
-                        <img src="https://meupet.elanco.com/sites/g/files/adhwdz661/files/styles/paragraph_image/public/2020-07/gato_malhado_azul_maine_cool_no_quintal_rodeado_por_flores_amarelas_no_gramado.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Botão que ativa o modal 
-                          </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card"> <!-- style="width: 18rem;" ele coloca a largura de 18rem-->
-                        <img src="https://meupet.elanco.com/sites/g/files/adhwdz661/files/styles/paragraph_image/public/2020-07/gato_malhado_azul_maine_cool_no_quintal_rodeado_por_flores_amarelas_no_gramado.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Botão que ativa o modal 
-                          </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>    
-        <!-- Inicio modal -->
-        <!-- Button trigger modal ,masdamos para q a col pega ela-->
+          <div class="row listaItens"></div>
+        </section>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body"> <!-- Agora vamos por um conteudo no modal -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card"> <!-- style="width: 18rem;" ele coloca a largura de 18rem-->
-                        <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-cat-questions-nationalgeographic_1228126.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Titulo Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body"> <!-- Agora vamos por um conteudo no modal -->
+            <div class="row detalheItem"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
         <!-- fim modal -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
 
-        <script>
-            $(function(){
-                console.log('Hello Word!')
-            })
-
-        </script>
     </body>
 </html>
-
-<!-- ctrl + u = ver em codigo o a o usuario esta vendo -->
-
-<!-- Hierarquia
-1: inline
-2:id
-3:classe
-4:atributo
-!o !import sobressai a todos -->
