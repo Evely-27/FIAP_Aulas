@@ -1,0 +1,16 @@
+#sessao{ /* pega o id  */
+    border: solid blue 1px;
+
+}
+.sessao{ /* pela a classe */
+    border: solid yellow 1px;
+}
+section { /* pega todos os elemntos section */
+    border: solid gray 1px;
+}
+/* .col-lg-2{
+    border: solid red 1px;
+} */
+.col-lg-4{
+    margin-top: 10px;
+}
