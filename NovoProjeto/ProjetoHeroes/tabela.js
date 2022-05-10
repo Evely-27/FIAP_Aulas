@@ -28,17 +28,34 @@ function tratarDados(objson) {
         <td>${dadosJ.Nome}</td>
         <td>${dadosJ.NomeH}</td>
         <td>
-              <button type="button" class="btn btn-primary" onclick="abrirPoderes('${objson.Nome}','${objson.imagem}','${objson.Poderes}')">
+              <button type="button" class="btn btn-primary" onclick="abrirPoderes('${dadosJ.Nome}','${dadosJ.imagem}','${dadosJ.Poderes}')">
                 Visualizar
               </button>
         </td>
       </tr>`; 
 
-      let conteudo = $('.conteudoTabela');
-      conteudo.append(contMostrar);
+      let conteudo = $('.conteudoTabela'); // sincronizando a classe conteudoTabela na variavel conteudo.
+      conteudo.append(contMostrar); //jogando na variavel  conteudo o contMostrar, será mostardo de forma incremental
     })
 }
 
+// criando função abrirPoderes
+function abrirPoderes(heroi,foto,poder) {
+    console.log(heroi,foto,poder);
+
+    let contModal = `<div class="col-md-12">
+                    <div class="card" >
+                        <img src="${foto}" class="card-img-top"  alt="foto de heroi">
+                        <div class="card-body">
+                        <h5 class="card-title">${heroi}</h5>
+                        <p class="card-text">${poder}</p>
+                    </div>
+                    </div>
+                </div>`;
+    
+    $('.conteudoModal').html(contModal)
+    $('#exampleModal').modal('show');
+}
 
 
 pegarDados(); // chamar função pegarDados , vai apresentar na tela
