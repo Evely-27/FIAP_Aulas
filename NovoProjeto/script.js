@@ -1,52 +1,49 @@
 // js normal , vai pegar a api
 function pegaDados(){
-    console.log('pega dados funcionando');
+    console.log('pega dados funcionando'); // confirmando que esta pegando os dados
 
-    // requisição para carregar os conteudos conforme a pessoa vai pedindo, recebe um unico paramentro = json
-    $.ajax({ 
+    $.ajax({      // requisição para carregar os conteudos conforme a pessoa vai pedindo, recebe um unico paramentro = json
         url:"https://iot.14mob.com/lista.json", // pega onde va  enviar
-        data:"",
-         // paramentro de busca
-        success: function(retorno){
-            tratarDados(retorno)
+        data:"",  // paramentro de busca
+        success: function(retorno){ // função que retorna algo ao ter os dados, aceita somente uma função
+            tratarDados(retorno) // chamado da função que vai tratar os dados pegos 
         }, 
-        // terminar quando terminar
-        dataType: "html" 
-        // tipo de dados que vai vir, coloca html pq pode ser qualquer tipo, se não soubermos o tipo q vai vir
+        dataType: "html"  // tipo de dados que vai vir, coloca html pq pode ser qualquer tipo, se não soubermos o tipo q vai vir
     }) 
 }
 // pegaDados(); // testando
 
 function tratarDados(dados) {
     dados = JSON.parse(dados); 
-//    console.log(dados);
+//    console.log(dados); confirmar que esta pegando os dados
 
-    var lista = $('.listaItens')
+    var lista = $('.listaItens') // variavel que vai sincronizar com a classe listaItens, que trata do conteudo que será apresentado no container, 1° a aparecer
 
-    $(dados).each(function(index,valor){
-
-        let conteudo = `<div class="col-md-4">
+    $(dados).each(function(index,valor){ //jquery aceita tudo($()) , depois faz um foreach para percorrer os dados pegos. So aceita uma função
+//variavel local para apresentar o conteudo dentro de listaItens.
+        let conteudo = `<div class="col-md-4"> 
                 <div class="card">
-                    <img src="${valor.imagem}" class= "card-img-top" onclick="abrirModal('${valor.nome,valor.imagem,valor.descricao}')" alt="terjsdndcn">
+                    <img src="${valor.imagem}" class= "card-img-top" onclick="abrirModal('${valor.nome},${valor.imagem},${valor.descricao}}')" alt="foto de cachorro">
                     <div class="card-body">
                     <h5 class="card-title">${valor.nome}</h5>
                     <p class="card-text">${valor.descricao}</p>
-                    <button type="button" class="btn btn-primary abrirModal" onclick="abrirModal('${valor.nome,valor.imagem,valor.descricao}')">
+                    <button type="button" class="btn btn-primary" onclick="abrirModal('${valor.nome}','${valor.imagem}','${valor.descricao}')">
                         Detalhes
                     </button>
                     </div>
                 </div>
             </div>`;
 
-        lista.append(conteudo);
+        lista.append(conteudo); //pega a varivel sincronizada com listaItens e joga "conteudo" para ser apresentada nela
     
     })
 }
 
-function abrirModal(nom,img,desc) {
+function abrirModal(nom,img,desc) { // função chamada no button em tratarDados/card
+//variavel local para apresentar o conteudo dentro de detalheItem, classe que trata do modal.
     let conteudo = `<div class="col-md-12">
                 <div class="card" >
-                    <img src="${img}" class="card-img-top" alt="terjsdndcn">
+                    <img src="${img}" class="card-img-top" alt="foto cachorro">
                     <div class="card-body">
                     <h5 class="card-title">${nom}</h5>
                     <p class="card-text">${desc}</p>
@@ -54,8 +51,8 @@ function abrirModal(nom,img,desc) {
                 </div>
          </div>`;
 
-    $('.detalheItem').html(conteudo)
-    $('#exampleModal').modal('show');
+    $('.detalheItem').html(conteudo) //pega a varivel sincronizada com detalheItem e jpga "conteudo" para ser apresentada nela
+    $('#exampleModal').modal('show'); //! não entendi
 
 }
 
