@@ -1,5 +1,24 @@
 [
     {
-        
+        "id": 1,
+        "imagem": "https://capricho.abril.com.br/wp-content/uploads/2019/07/tony-hand-updated-robert-downey-jr-homem-de-ferro.jpg",
+        "Nome": "Tony Stark",
+        "NomeH":"Homem de Ferro",
+        "Poderes": "Força sobre-humana,Velocidade,Durabilidade,Dinheiro"
+    },
+    {
+        "id": 2,
+        "imagem": "https://tm.ibxk.com.br/2021/05/03/03183011251371.jpg",
+        "Nome": "Peter Parker",
+        "NomeH":"Homem Aranha",
+        "Poderes": "Força sobre-humana, Fixar-se a paredes e tetos, Incrível Agilidade e “sentido de aranha” que o avisa sobre o perigo."
+    },
+
+    {
+        "id": 3,
+        "imagem": "https://disneyplusbrasil.com.br/wp-content/uploads/2021/05/Hulk-Vingadores.jpg",
+        "Nome": "Bruce Banner",
+        "NomeH":"Hulk",
+        "Poderes": "Intelecto, Transformação Gama, Força descomunal, Manipulação e absorção de radiação, Regeneração avançada"
     }
 ]
