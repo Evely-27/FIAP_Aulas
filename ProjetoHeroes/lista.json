@@ -20,5 +20,13 @@
         "Nome": "Bruce Banner",
         "NomeH":"Hulk",
         "Poderes": "Intelecto, Transformação Gama, Força descomunal, Manipulação e absorção de radiação, Regeneração avançada"
+    },
+
+    {
+        "id": 3,
+        "imagem": "https://disneyplusbrasil.com.br/wp-content/uploads/2021/05/Hulk-Vingadores.jpg",
+        "Nome": "Bruce Banner",
+        "NomeH":"Hulk",
+        "Poderes": "Intelecto, Transformação Gama, Força descomunal, Manipulação e absorção de radiação, Regeneração avançada"
     }
 ]
