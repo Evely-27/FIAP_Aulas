@@ -20,9 +20,6 @@ function Tabela(){
 
         }
 
-
-
-
         //criar chamada para salvar o formulario, o them é para se der certo, fazer algo
         axios.post('https://iot.14mob.com/api-fiap/public/index.php/users',parametros).then(response => {
             //se a resposta der certo
@@ -32,6 +29,14 @@ function Tabela(){
                 alert('deu merda viu')
             }
         }).catch( error =>console.log(error)); // o cath é para se nem for aceita a requisições ele vai dizer o erro
+    }
+
+    function removerUser (id) {
+           // console.log('funcionaouuuuuuuuu '+id);
+
+           axios.delete("https://iot.14mob.com/api-fiap/public/index.php/users/" + id).then(response => {
+               alert('Usuario removido.')
+           }).catch(error => console.log(error));
     }
 
 
@@ -72,6 +77,7 @@ function Tabela(){
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
+                    <th>Açôes</th>
                     </tr>
                 
                 </thead>  
@@ -82,6 +88,9 @@ function Tabela(){
                                 <td>{usuario.id}</td>
                                 <td>{usuario.name}</td>  {/* no api esta com o id como name */}
                                 <td>{usuario.email}</td>
+                                <td>
+                                    <button onClick={ event => removerUser(usuario.id)}> Deletar </button>
+                                </td>
                             </tr>
                             )
                     } ) }
