@@ -6,6 +6,7 @@ function Tabela(){
 
     const [usuarios, setUsuarios] = useState([]);
 
+    const [id,setId] = useState("");
     const [nome,setNome] = useState("");// variavel para acessar a varivel, é como o metodo privat de classe, ai acessamoa a variavel nome pela setNome
     const [ email, setEmail] = useState("");
     const [senha, setSenha] =useState("");
@@ -37,6 +38,14 @@ function Tabela(){
            axios.delete("https://iot.14mob.com/api-fiap/public/index.php/users/" + id).then(response => {
                alert('Usuario removido.')
            }).catch(error => console.log(error));
+    }
+
+    function atualizarUser(user){
+        setId(user.id);
+        setNome(user.name);
+        setEmail(user.email);
+        setSenha(user.password);
+
     }
 
 
@@ -89,6 +98,7 @@ function Tabela(){
                                 <td>{usuario.name}</td>  {/* no api esta com o id como name */}
                                 <td>{usuario.email}</td>
                                 <td>
+                                    <button onClick={ event => atualizarUser(usuario.id)}> Editar </button>
                                     <button onClick={ event => removerUser(usuario.id)}> Deletar </button>
                                 </td>
                             </tr>
